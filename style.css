@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: #081b29;
+    color: #ededed;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.main-container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #081b29;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: rgb(255, 102, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: rgb(255, 102, 0);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+.inline-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 102, 0);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.home-content .btn-links {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-links a {
+    position: relative;
+    display: inline-flex;
+    margin: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgb(255, 102, 0);
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(255, 102, 0);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-links a:hover::before {
+    width: 100%;
+}
+
+.skills {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10% 10%;
+}
+
+.skill-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+}
+
+.skill-card {
+    flex: 1;
+    max-width: 400px;
+    background-color: #0c283c;
+    margin: 20px 20px;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    transition: .3s linear;
+    border-radius: 10px;
+}
+
+.skill-card-header {
+    background-color: rgb(255, 102, 0);
+    display: inline-block;
+    color: white;
+    width: 100%;
+    padding: 12px 30px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.skill-card:hover .skill-card-header {
+    box-shadow: 0 0 0 26em rgb(252, 132, 51);
+}
+
+.skill-card li {
+    padding: 8px 0;
+}
+
+span {
+    font-weight: 800 bold;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .skill-card {
+        flex: 50%;
+    }
+}
+
