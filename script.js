@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector("h3 span");
-const words = ["Programmer", "Backend Developer", "Game Developer"];
+const words = ["Programmer", "Backend Dev", "Game Dev"];
 
 let wordIdx = 0;
 let charIdx = 0;
