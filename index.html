@@ -1,72 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>👨‍💻 coganka</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>👨‍💻 Can Ogan Karagün</title>
 
+  <meta name="description" content="Portfolio of Can Ogan Karagün — backend, robotics, and game developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <a href="/" class="logo">@coganka</a>
-    <nav class="navbar">
+  <header class="header" id="top">
+    <a href="#home-section" class="logo" aria-label="Home">@coganka</a>
+    <nav class="navbar" aria-label="Primary">
       <a href="#home-section" class="active">Home</a>
+      <a href="#projects-section">Projects</a>
       <a href="#skills-section">Skills</a>
     </nav>
   </header>
 
   <div class="main-container">
-    <section class="home" id="home-section">
+    <!-- Home -->
+    <section class="home" id="home-section" aria-labelledby="home-heading">
       <div class="home-content">
-        <h1>Hi, I'm <span class="inline-name">Can</span></h1>
-        <h3>> <span></span></h3>
-        <p>Welcome to my personal website! My full name is <span><strong>Can Ogan Karagün</strong></span> and I am studying Electronics and Telecommunications Engineering but my passion is Programming and I have been learning and doing projects for years. You can find my product, project and portfolio links below. Feel free to contact me at <strong>cogankaa@gmail.com</strong>. Have a nice day!</p>
-        <div class="btn-links">
-          <a href="https://www.youtube.com/@coganka"><i class='bx bxl-youtube'></i></a>
-          <a href="https://github.com/coganka"><i class='bx bxl-github'></i></a>
-          <a href="https://www.xbox.com/en-us/games/store/danger-close/9n1759sv0435"><i class="fa-brands fa-xbox"></i></a>
-          <a href="https://apps.apple.com/us/developer/can-ogan-karagun/id1613951462"><i class='bx bxl-apple'></i></a>
-          <a href="https://linkedin.com/in/can-ogan-karagün-572868197"><i class='bx bxl-linkedin'></i></a>
+        <h1 id="home-heading">Hi, I'm <span class="inline-name">Can</span></h1>
+        <h3>&gt; <span class="typed-target"></span></h3>
+        <p>
+          I’m <strong>Can Ogan Karagün</strong>, a graduate in Electronics & Telecomm. Engineering passionate about <strong>Software Development</strong>. I build scalable backend systems, real-time simulations, and interactive applications for web, mobile, and desktop — explore my work below or reach me at 
+          <strong><a class="email" href="mailto:cogankaa@gmail.com">cogankaa@gmail.com</a></strong>.
+        </p>
+        <div class="btn-links" role="group" aria-label="Social links">
+          <a href="https://www.youtube.com/@coganka" aria-label="YouTube" target="_blank" rel="noopener"><i class='bx bxl-youtube'></i></a>
+          <a href="https://github.com/coganka" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+          <a href="https://www.xbox.com/en-us/games/store/danger-close/9n1759sv0435" aria-label="Xbox" target="_blank" rel="noopener"><i class="fa-brands fa-xbox"></i></a>
+          <a href="https://apps.apple.com/us/developer/can-ogan-karagun/id1613951462" aria-label="App Store" target="_blank" rel="noopener"><i class='bx bxl-apple'></i></a>
+          <a href="https://linkedin.com/in/can-ogan-karagün-572868197" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#projects-section">See Projects</a>
+          <a class="btn ghost" href="./assets/CanKaragun_CVP.pdf" target="_blank" rel="noopener">View CV</a>
         </div>
       </div>
     </section>
-    <section class="skills" id="skills-section">
+
+    <!-- Projects -->
+    <section class="projects" id="projects-section">
+      <div class="projects-content">
+        <h1>Projects</h1>
+        <!-- <p class="projects-subtitle">Some of them</p> -->
+
+        <div class="project-grid">
+          <a href="https://www.youtube.com/watch?v=14Rnpu9-YWk&ab_channel=coganka" class="project-card" target="_blank" rel="noopener">
+            <h3>SLAM Mapping</h3>
+            <p>Built a 2D Python robot with SLAM and Kalman filters, generating a live 3D point cloud from simulated LIDAR.</p>
+          </a>
+          <a href="https://www.youtube.com/watch?v=XzWBMnbiCw0&ab_channel=coganka" class="project-card" target="_blank" rel="noopener">
+            <h3>Maze Solver</h3>
+            <p>Maze generator and pathfinding visualizer with BFS, DFS, A*, Dijkstra.</p>
+          </a>
+          <a href="https://github.com/coganka/go-microservices" class="project-card" target="_blank" rel="noopener">
+            <h3>Go Microservices</h3>
+            <p>Developed distributed microservices with Go, Docker Swarm, RabbitMQ and gRPC</p>
+          </a>
+          <a href="https://www.youtube.com/watch?v=EZasiB3-hBo" class="project-card" target="_blank" rel="noopener">
+            <h3>Puzzle Game with Hand Tracking</h3>
+            <p>Developed a puzzle game controlled via real-time hand tracking</p>
+          </a>
+          <a href="https://www.xbox.com/en-us/games/store/danger-close/9n1759sv0435" class="project-card" target="_blank" rel="noopener">
+            <h3>Xbox & iOS Games</h3>
+            <p>Developed FPS titles for Xbox and hyper-casual games for iOS using Unity.</p>
+          </a>
+          <a href="https://github.com/coganka/video-chat-app" class="project-card" target="_blank" rel="noopener">
+            <h3>Video Chat Application</h3>
+            <p>Built a peer-to-peer video chat app using WebRTC and Socket.IO</p>
+          </a>
+        </div>
+        <p class="more-projects">
+          More on <a href="https://www.youtube.com/@coganka" target="_blank">YouTube</a>
+        </p>
+        
+      </div>
+    </section>
+    
+    
+
+    <!-- Skills -->
+    <section class="skills fit" id="skills-section" aria-labelledby="skills-heading">
       <div class="skills-content">
-        <h1>Tech & Languages</h1>
+        <h1 id="skills-heading">Tech & Languages</h1>
         <div class="skill-table">
           <div class="skill-card">
             <h3 class="skill-card-header">Languages</h3>
             <ul>
-              <li><strong>Python</strong></li>
-              <li><strong>JavaScript</strong></li>
-              <li><strong>C#</strong></li>
-              <li><strong>C++</strong></li>
-              <li><strong>C</strong></li>
-              <li><strong>Swift</strong></li>
-              <li><strong>Golang</strong></li>
-              <li><strong>Rust</strong></li>
+              <li><strong>Python</strong></li><li><strong>JavaScript</strong></li>
+              <li><strong>C#</strong></li><li><strong>C++</strong></li>
+              <li><strong>C</strong></li><li><strong>Swift</strong></li>
+              <li><strong>Golang</strong></li><li><strong>Rust</strong></li>
             </ul>
           </div>
           <div class="skill-card">
             <h3 class="skill-card-header">Web Dev</h3>
             <ul>
-              <li><strong>Node.js</strong></li>
-              <li><strong>Flask</strong></li>
-              <li><strong>MongoDB</strong></li>
-              <li><strong>Mongoose</strong></li>
-              <li><strong>PostgreSQL</strong></li>
-              <li><strong>Redis</strong></li>
-              <li><strong>Socket.io</strong></li>
-              <li><strong>WebRTC</strong></li>
-              <li><strong>Jest</strong></li>
-              <li><strong>GraphQL</strong></li>
+              <li><strong>Node.js</strong></li><li><strong>Flask</strong></li>
+              <li><strong>MongoDB</strong></li><li><strong>Mongoose</strong></li>
+              <li><strong>PostgreSQL</strong></li><li><strong>Redis</strong></li>
+              <li><strong>Socket.io</strong></li><li><strong>WebRTC</strong></li>
+              <li><strong>Jest</strong></li><li><strong>GraphQL</strong></li>
             </ul>
           </div>
           <div class="skill-card">
@@ -90,7 +135,8 @@
       </div>
     </section>
   </div>
-  
+
+  <!-- Font Awesome (Xbox icon) -->
   <script src="https://kit.fontawesome.com/9dff89872f.js" crossorigin="anonymous"></script>
 </body>
 </html>
