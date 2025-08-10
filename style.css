@@ -13,7 +13,7 @@
     --muted: #c9d2d8;
     --accent: rgb(255, 102, 0);
     --radius: 10px;
-    --header-h: 72px; /* keep this in sync with header height */
+    --header-h: 72px; 
   }
   
   html, body { height: 100%; background-color: var(--bg); color: var(--text); }
@@ -22,8 +22,8 @@
   section { min-height: 100dvh; scroll-snap-align: start; scroll-snap-stop: always; }
   .main-container {
     height: 100dvh;
-    overflow-y: auto;                 /* 'auto' avoids bounce/jitter */
-    scroll-snap-type: y mandatory;    /* stable snap (set to 'none' to disable) */
+    overflow-y: auto;                 
+    scroll-snap-type: y mandatory;    
     scroll-padding-top: var(--header-h);
     scroll-behavior: smooth;
     overscroll-behavior: contain;
@@ -115,7 +115,6 @@
     .home-content h3 .typed-target { font-size: 28px; }
   }
   
-/* Reset all link colors & underlines */
 a,
 a:visited,
 a:active {
@@ -123,20 +122,17 @@ a:active {
   text-decoration: none;
 }
 
-/* Keep button-style links looking like buttons */
 .btn,
 .project-links a {
   color: #0b0c10;
   text-decoration: none;
 }
 
-/* If you want hover underline only for body-text links */
 .email:hover,
 .projects-sub a:hover {
   text-decoration: underline;
 }
 
-/* Optional: make project links match accent color */
 .project-links a {
   background: var(--accent);
   color: #0b0c10;
@@ -148,16 +144,15 @@ a:active {
 
 .btn.ghost {
     border: 2px solid var(--accent);
-    color: var(--text); /* ensures readable white text */
+    color: var(--text); 
     background: transparent;
   }
   
 .btn.ghost:hover {
     background: var(--accent);
-    color: #0b0c10; /* dark text when hovered */
+    color: #0b0c10; 
 }
   
-/* Compact projects grid: smaller cards, more per row */
 .projects-grid.compact {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
@@ -167,7 +162,7 @@ a:active {
     border-radius: 8px;
   }
   
-  .projects-grid.compact .thumb { aspect-ratio: 4/3; }         /* shorter thumbs */
+  .projects-grid.compact .thumb { aspect-ratio: 4/3; }       
   .projects-grid.compact .project-card img {
     width: 100%; height: 100%; object-fit: cover;
   }
@@ -182,7 +177,7 @@ a:active {
   
   .projects-grid.compact .project-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* 2 small buttons side-by-side */
+    grid-template-columns: 1fr 1fr;  
     gap: 8px;
     padding: 0;
   }
@@ -192,20 +187,18 @@ a:active {
     border-radius: 6px;
   }
   
-  /* Tighten section spacing on small screens */
   @media (max-width: 600px) {
     .projects { padding: 8rem 1rem 4rem; }
     .projects-sub { margin-bottom: 18px; font-size: 14px; }
   }
   
 
-  /* 6 cards that always fit within the section */
 .projects-grid.sixpack {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
+    grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, 1fr);
     gap: 8px; /* tighter gap */
-    height: 100%; /* force to fill section height exactly */
+    height: 100%; 
   }
   
   .projects-grid.sixpack .project-card {
@@ -264,7 +257,6 @@ a:active {
     text-align: center;
   }
   
-  /* More link */
   .more-link {
     text-align: center;
     margin-top: 4px;
@@ -279,7 +271,6 @@ a:active {
     text-decoration: underline;
   }
   
-  /* Tablet layout: 2×3 */
   @media (max-width: 980px) {
     .projects-grid.sixpack {
       grid-template-columns: repeat(2, 1fr);
@@ -287,7 +278,6 @@ a:active {
     }
   }
   
-  /* Mobile layout: 1×6 */
   @media (max-width: 560px) {
     .projects-grid.sixpack {
       grid-template-columns: 1fr;
@@ -297,23 +287,19 @@ a:active {
       -webkit-line-clamp: 3;
     }
   }
-/* --- FORCE PROJECTS TO FIT ONE SNAP PAGE --- */
 
 .projects.fit {
-    /* kill big vertical padding so it can fit */
     padding: 8px 10% 6px;
   }
   
   .projects.fit .projects-content {
-    /* exactly one viewport minus header and this section's own padding */
     height: calc(100dvh - var(--header-h) - 14px);
     display: grid;
     grid-template-rows: auto auto 1fr auto; /* title, sub, grid, more */
     row-gap: 6px;
-    min-height: 0; /* critical: allow inner grid to shrink */
+    min-height: 0; 
   }
   
-  /* compact title/sub */
   .projects.fit h1 {
     font-size: 20px;
     line-height: 1.1;
@@ -325,7 +311,6 @@ a:active {
     margin: 0;
   }
   
-  /* 6-card grid fills the available space exactly */
   .projects-grid.sixpack {
     height: 100%;
     display: grid;
@@ -335,7 +320,6 @@ a:active {
     min-height: 0;     /* critical */
   }
   
-  /* super-compact cards */
   .projects-grid.sixpack .project-card {
     display: grid;
     grid-template-rows: auto 1fr;  /* thumb, body */
@@ -391,14 +375,12 @@ a:active {
     text-align: center;
   }
   
-  /* "More on YouTube" tight */
   .projects.fit .more-link {
     margin: 2px 0 0;
     font-size: 12px;
     line-height: 1.2;
   }
   
-  /* Tablet: 2×3 but still fit one page */
   @media (max-width: 980px) {
     .projects.fit { padding: 6px 6% 6px; }
     .projects.fit .projects-content {
@@ -410,12 +392,10 @@ a:active {
     }
   }
   
-  /* Mobile: 1×6; still one snap page */
   @media (max-width: 560px) {
     .projects.fit { padding: 4px 4%
   }
 
-/* Make individual project cards smaller inside their grid cell */
 .projects-grid.sixpack .project-card {
     align-self: center;       /* center vertically in the cell */
     justify-self: center;     /* center horizontally in the cell */
@@ -439,7 +419,6 @@ a:active {
   }
 }
 
-/* ==== SKILLS: fit to one snap page, compact & responsive ==== */
 .skills.fit {
   padding: 8px 10% 6px;                /* shrink vertical padding */
 }
@@ -451,7 +430,6 @@ a:active {
   min-height: 0;                       /* critical for shrinking */
 }
 
-/* switch from flex to grid so we can control rows/cols */
 .skills.fit .skill-table {
   display: grid;
   grid-template-columns: repeat(4, 1fr);  /* desktop: 4 across */
@@ -490,7 +468,6 @@ a:active {
   font-size: 12px;
 }
 
-/* Tablet: 2 rows x 2 cols (2x2 = 4 cards) */
 @media (max-width: 980px) {
   .skills.fit { padding: 6px 6% 6px; }
   .skills.fit .skills-content {
@@ -506,7 +483,6 @@ a:active {
   .skills.fit .skill-card li { font-size: 11px; }
 }
 
-/* Mobile: 1 column x 4 rows (still one page) */
 @media (max-width: 560px) {
   .skills.fit { padding: 4px 4% 4px; }
   .skills.fit .skills-content {
@@ -524,7 +500,6 @@ a:active {
   .skills.fit .skill-card li { font-size: 10.5px; }
 }
 
-/* === SKILLS: 4 across on desktop, more margin === */
 @media (min-width: 1200px) {
   .skills.fit .skills-content {
     height: calc(100dvh - var(--header-h) - 14px);
@@ -556,7 +531,6 @@ a:active {
   }
 }
 
-/* === NAVBAR: keep everything on ONE ROW (mobile too) === */
 @media (max-width: 600px) {
   .header{
     display: flex;
@@ -647,7 +621,6 @@ a:active {
 
 /* ---------- Responsive tweaks ---------- */
 
-/* Tablets: keep nice density */
 @media (max-width: 900px) {
   .projects { padding: 8% 6%; }
   .project-grid {
@@ -663,10 +636,8 @@ a:active {
   .project-card { padding: 10px; border-radius: 8px; }
 }
 
-/* prevent any horizontal scroll leaks (navbar, grids, etc.) */
 html, body { max-width: 100%; overflow-x: hidden; }
 
-/* Projects: true mobile stack, no sideways scroll */
 @media (max-width: 560px) {
   .projects { padding: 6% 4%; }
   .project-grid {
