@@ -278,15 +278,15 @@ canvas:active {
 }
 .context-strip p {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 1rem;
 }
 .small-label {
   margin-right: 16px;
-  font-size: 0.69rem;
+  font-size: 0.8125rem;
   color: var(--muted);
 }
 .context-strip strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 .orange-dot {
   font-size: 0.55rem;
@@ -687,7 +687,7 @@ h2 {
     margin-right: 8px;
   }
   .context-strip p {
-    font-size: 0.81rem;
+    font-size: 1rem;
   }
   .work {
     padding-top: 66px;
@@ -856,5 +856,66 @@ h2 {
   }
   a {
     color: #111;
+  }
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  gap: 64px;
+  padding-top: 72px;
+}
+.experience-intro h2 {
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  max-width: 360px;
+}
+.experience-intro > p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 18px 0 0;
+  max-width: 350px;
+}
+.experience-intro .experience-role {
+  color: var(--text);
+}
+.experience-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.experience-details li {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.experience-details li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.experience-details h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+.experience-details p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+@media (max-width: 700px) {
+  .context-strip p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 5px;
+  }
+  .context-strip .small-label {
+    flex-basis: 100%;
+    margin: 0 0 3px;
+  }
+  .context-strip {
+    gap: 16px;
+  }
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 48px;
   }
 }
