@@ -919,3 +919,13 @@ h2 {
     padding-top: 48px;
   }
 }
+
+.project-year {
+  display: inline-block;
+  margin-left: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+}
