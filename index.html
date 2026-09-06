@@ -1,142 +1,457 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>👨‍💻 Can Ogan Karagün</title>
-
-  <meta name="description" content="Portfolio of Can Ogan Karagün — backend, robotics, and game developer." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-
-  <header class="header" id="top">
-    <a href="#home-section" class="logo" aria-label="Home">@coganka</a>
-    <nav class="navbar" aria-label="Primary">
-      <a href="#home-section" class="active">Home</a>
-      <a href="#projects-section">Projects</a>
-      <a href="#skills-section">Skills</a>
-    </nav>
-  </header>
-
-  <div class="main-container">
-    <!-- Home -->
-    <section class="home" id="home-section" aria-labelledby="home-heading">
-      <div class="home-content">
-        <h1 id="home-heading">Hi, I'm <span class="inline-name">Can</span></h1>
-        <h3>&gt; <span class="typed-target"></span></h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111214" />
+    <title>Can Ogan Karagün — Software Engineer</title>
+    <meta
+      name="description"
+      content="Can Ogan Karagün. Software engineer building telecom systems, graphics engines, real-time simulations, and games for Xbox and iOS."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header wrap">
+      <a class="wordmark" href="#home-section" aria-label="Can Karagün home"
+        >coganka<span>_</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#projects-section">Work</a><a href="#skills-section">Skills</a
+        ><a href="assets/CanKaragun_CV.pdf" target="_blank" rel="noopener"
+          >Résumé <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <a class="header-contact" href="mailto:cankaragun@gmail.com"
+        >Let’s talk <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="home-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="signal" aria-hidden="true"></span> SOFTWARE ENGINEER
+          </p>
+          <h1 id="hero-title">Can Ogan<br /><span>Karagün.</span></h1>
+          <p class="hero-lead">
+            Production systems.<br />Real-time graphics. Games people play.
+          </p>
+          <p class="hero-description">
+            I build software across the stack—from telecom infrastructure at
+            TechNarts to graphics and physics engines written from scratch.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects-section"
+              >Explore my work <span aria-hidden="true">↓</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/coganka"
+              target="_blank"
+              rel="noopener"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <div class="scene-panel">
+          <div class="scene-top">
+            <span class="eyebrow">A LITTLE EXPLORATION</span
+            ><span class="scene-id">001 / TREFOIL</span>
+          </div>
+          <div class="canvas-shell">
+            <canvas
+              id="scene"
+              tabindex="0"
+              aria-label="Interactive 3D trefoil knot. Drag horizontally or use arrow keys to rotate. Use the buttons below to change rendering or pause animation."
+              >A 3D trefoil knot study. Explore the graphics project below to
+              see my C renderer.</canvas
+            >
+          </div>
+          <div class="scene-bottom">
+            <span id="scene-help">Drag to rotate</span>
+            <div class="scene-controls">
+              <button type="button" id="mode" aria-pressed="false">
+                Wireframe</button
+              ><button type="button" id="motion" aria-pressed="false">
+                Pause <span aria-hidden="true">Ⅱ</span></button
+              ><button type="button" id="reset" aria-label="Reset 3D view">
+                ↺
+              </button>
+            </div>
+          </div>
+          <p class="scene-caption">
+            An interactive browser study.
+            <a
+              href="https://github.com/coganka/3d-rasterizer"
+              target="_blank"
+              rel="noopener"
+              >Explore my C renderer ↗</a
+            >
+          </p>
+        </div>
+      </section>
+      <div class="context-strip wrap">
         <p>
-          I’m <strong>Can Ogan Karagün</strong>, a Software Engineer specializing in backend systems, real-time simulations, and interactive applications. I’ve built projects for web, mobile, and desktop, focusing on scalable architectures and engaging user experiences. Feel free to contact me at  
-          <strong><a class="email" href="mailto:cogankaa@gmail.com">cogankaa@gmail.com</a></strong>.
+          <span class="small-label">CURRENTLY</span> Building telecom systems at
+          <strong>TechNarts</strong>
         </p>
-        <div class="btn-links" role="group" aria-label="Social links">
-          <a href="https://www.youtube.com/@coganka" aria-label="YouTube" target="_blank" rel="noopener"><i class='bx bxl-youtube'></i></a>
-          <a href="https://github.com/coganka" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
-          <a href="https://www.xbox.com/en-us/games/store/danger-close/9n1759sv0435" aria-label="Xbox" target="_blank" rel="noopener"><i class="fa-brands fa-xbox"></i></a>
-          <a href="https://apps.apple.com/us/developer/can-ogan-karagun/id1613951462" aria-label="App Store" target="_blank" rel="noopener"><i class='bx bxl-apple'></i></a>
-          <a href="https://linkedin.com/in/can-ogan-karagün-572868197" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn primary" href="#projects-section">See Projects</a>
-          <a class="btn ghost" href="./assets/CanKaragun_CV.pdf" target="_blank" rel="noopener">View CV</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="projects-section">
-      <div class="projects-content">
-        <h1>Projects</h1>
-        <!-- <p class="projects-subtitle">Some of them</p> -->
-
-        <div class="project-grid">
-          <a href="https://www.youtube.com/watch?v=14Rnpu9-YWk&ab_channel=coganka" class="project-card" target="_blank" rel="noopener">
-            <h3>SLAM Mapping</h3>
-            <p>Built a 2D Python robot with SLAM and Kalman filters, generating a live 3D point cloud from simulated LIDAR.</p>
-          </a>
-          <a href="https://www.youtube.com/watch?v=XzWBMnbiCw0&ab_channel=coganka" class="project-card" target="_blank" rel="noopener">
-            <h3>Maze Solver</h3>
-            <p>Maze generator and pathfinding visualizer with BFS, DFS, A*, Dijkstra.</p>
-          </a>
-          <a href="https://github.com/coganka/go-microservices" class="project-card" target="_blank" rel="noopener">
-            <h3>Go Microservices</h3>
-            <p>Developed distributed microservices with Go, Docker Swarm, RabbitMQ and gRPC</p>
-          </a>
-          <a href="https://www.youtube.com/watch?v=EZasiB3-hBo" class="project-card" target="_blank" rel="noopener">
-            <h3>Puzzle Game with Hand Tracking</h3>
-            <p>Developed a puzzle game controlled via real-time hand tracking</p>
-          </a>
-          <a href="https://www.xbox.com/en-us/games/store/danger-close/9n1759sv0435" class="project-card" target="_blank" rel="noopener">
-            <h3>Xbox & iOS Games</h3>
-            <p>Developed FPS titles for Xbox and hyper-casual games for iOS using Unity.</p>
-          </a>
-          <a href="https://github.com/coganka/video-chat-app" class="project-card" target="_blank" rel="noopener">
-            <h3>Video Chat Application</h3>
-            <p>Built a peer-to-peer video chat app using WebRTC and Socket.IO</p>
-          </a>
-        </div>
-        <p class="more-projects">
-          More on <a href="https://www.youtube.com/@coganka" target="_blank">YouTube</a>
+        <p>
+          <span class="small-label">BASED IN</span> Ankara, Turkey
+          <span class="orange-dot" aria-hidden="true">●</span>
         </p>
-        
       </div>
-    </section>
-    
-    
-
-    <!-- Skills -->
-    <section class="skills fit" id="skills-section" aria-labelledby="skills-heading">
-      <div class="skills-content">
-        <h1 id="skills-heading">Tech & Languages</h1>
-        <div class="skill-table">
-          <div class="skill-card">
-            <h3 class="skill-card-header">Languages</h3>
-            <ul>
-              <li><strong>Python</strong></li><li><strong>JavaScript</strong></li>
-              <li><strong>C#</strong></li><li><strong>C++</strong></li>
-              <li><strong>C</strong></li><li><strong>Swift</strong></li>
-              <li><strong>Golang</strong></li><li><strong>Rust</strong></li>
-            </ul>
+      <section
+        class="work wrap"
+        id="projects-section"
+        aria-labelledby="work-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / SELECTED WORK</p>
+            <h2 id="work-title">From the inside out.</h2>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-card-header">Web Dev</h3>
-            <ul>
-              <li><strong>Node.js</strong></li><li><strong>Flask</strong></li>
-              <li><strong>MongoDB</strong></li><li><strong>Mongoose</strong></li>
-              <li><strong>PostgreSQL</strong></li><li><strong>Redis</strong></li>
-              <li><strong>Socket.io</strong></li><li><strong>WebRTC</strong></li>
-              <li><strong>Jest</strong></li><li><strong>GraphQL</strong></li>
-            </ul>
+          <p>Systems behind the scenes.<br />Experiments you can see.</p>
+        </div>
+        <div class="featured-grid">
+          <article class="feature-card">
+            <a
+              class="project-image"
+              href="https://www.youtube.com/watch?v=CICV9OIz_qQ"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch the C graphics renderer demo"
+              ><img
+                src="assets/renderer.jpg"
+                width="480"
+                height="360"
+                alt="Aircraft scene rendered by my C software rasterizer"
+                loading="lazy"
+              /><span class="watch"
+                >Watch demo <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <div class="card-copy">
+              <p class="tagline">C · SDL2 · COMPUTER GRAPHICS</p>
+              <h3>Pixels, from first principles.</h3>
+              <p>
+                A 3D software rasterizer with custom transformations, clipping,
+                lighting, and textured triangles.
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/coganka/3d-rasterizer"
+                target="_blank"
+                rel="noopener"
+                >Explore the renderer <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="feature-card">
+            <a
+              class="project-image"
+              href="https://www.youtube.com/watch?v=GAgbqJkpl2k"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch the C++ cloth physics demo"
+              ><img
+                src="assets/physics.jpg"
+                width="480"
+                height="360"
+                alt="A cloth grid in the C++ physics simulation"
+                loading="lazy"
+              /><span class="watch"
+                >Watch demo <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <div class="card-copy">
+              <p class="tagline">C++ · PHYSICS · SIMULATION</p>
+              <h3>A world with its own rules.</h3>
+              <p>
+                Rigid bodies, collisions, constraints, and interactive cloth.
+                Simulation math implemented in C++.
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/coganka/2d-physics-engine"
+                target="_blank"
+                rel="noopener"
+                >Explore the engine <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="feature-card">
+            <a
+              class="project-image"
+              href="https://www.youtube.com/watch?v=EZasiB3-hBo"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch the hand-tracking puzzle game"
+              ><img
+                src="assets/hand-tracking.jpg"
+                width="480"
+                height="360"
+                alt="Unity puzzle game controlled with hand tracking"
+                loading="lazy"
+              /><span class="watch"
+                >Watch demo <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <div class="card-copy">
+              <p class="tagline">UNITY · PYTHON · OPENCV</p>
+              <h3>Your hands are the controller.</h3>
+              <p>
+                A puzzle game connecting real-time hand tracking in Python with
+                interactive objects in Unity.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.youtube.com/watch?v=EZasiB3-hBo"
+                target="_blank"
+                rel="noopener"
+                >See it in action <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="project-list" aria-label="More selected projects">
+          <a
+            class="project-row"
+            href="https://github.com/coganka/api-gateway"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">04</span>
+            <div>
+              <h3>API Gateway</h3>
+              <p>
+                Routing, API keys, rate limiting, retries, and request metrics.
+              </p>
+            </div>
+            <span class="row-stack">Python / Flask / Redis</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="project-row"
+            href="https://github.com/coganka/go-redis-job-queue"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">05</span>
+            <div>
+              <h3>Redis Job Queue</h3>
+              <p>
+                Concurrent workers, scheduled jobs, retry backoff, and a
+                dead-letter queue.
+              </p>
+            </div>
+            <span class="row-stack">Go / Redis Streams</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="project-row"
+            href="https://github.com/coganka/go-microservices"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">06</span>
+            <div>
+              <h3>Go Microservices</h3>
+              <p>
+                Service boundaries explored through HTTP, RPC, gRPC, and
+                messaging.
+              </p>
+            </div>
+            <span class="row-stack">Go / RabbitMQ / Docker</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="project-row"
+            href="https://www.youtube.com/watch?v=14Rnpu9-YWk"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">07</span>
+            <div>
+              <h3>SLAM Mapping</h3>
+              <p>
+                A simulated robot mapping its surroundings with laser scans and
+                Kalman filtering.
+              </p>
+            </div>
+            <span class="row-stack">Python / Robotics</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="project-row"
+            href="https://www.youtube.com/watch?v=XzWBMnbiCw0"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">08</span>
+            <div>
+              <h3>Maze Generator & Solver</h3>
+              <p>
+                Pathfinding algorithms made visible, one explored node at a
+                time.
+              </p>
+            </div>
+            <span class="row-stack">Python / Algorithms</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="project-row"
+            href="https://github.com/coganka/videoCall"
+            target="_blank"
+            rel="noopener"
+            ><span class="row-number">09</span>
+            <div>
+              <h3>Video Chat</h3>
+              <p>
+                Peer-to-peer video with room coordination and real-time events.
+              </p>
+            </div>
+            <span class="row-stack">WebRTC / Node.js</span
+            ><span class="row-arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="more-work">
+          <span>There’s more in the workshop.</span
+          ><a
+            class="text-link"
+            href="https://www.youtube.com/@coganka"
+            target="_blank"
+            rel="noopener"
+            >Visit my YouTube channel ↗</a
+          >
+        </div>
+      </section>
+      <section class="games wrap" aria-labelledby="games-title">
+        <div class="games-intro">
+          <p class="eyebrow">BUILT. SHIPPED. PLAYED.</p>
+          <h2 id="games-title">Out in the world.</h2>
+          <p>
+            Four games published for Xbox and iOS, from first-person shooters to
+            a hyper-casual chicken.
+          </p>
+        </div>
+        <div class="games-details">
+          <div class="game-stat">
+            <strong>105K<span>+</span></strong>
+            <p>combined downloads</p>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-card-header">Misc.</h3>
-            <ul>
-              <li><strong>Algorithms & Data Structures</strong></li>
-              <li><strong>Pathfinding</strong></li>
-              <li><strong>2D Physics Engine</strong></li>
-              <li><strong>3D Rasterization</strong></li>
-              <li><strong>Machine Learning</strong></li>
-            </ul>
+          <div class="game-platform">
+            <span>Xbox <small>70K+</small></span>
+            <div>
+              <a
+                href="https://www.xbox.com/en-US/games/store/danger-close/9n1759sv0435"
+                target="_blank"
+                rel="noopener"
+                >Danger Close ↗</a
+              ><a
+                href="https://www.xbox.com/en-US/games/store/fight-freaks/9mw7d2whrsbg"
+                target="_blank"
+                rel="noopener"
+                >Fight Freaks ↗</a
+              >
+            </div>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-card-header">Game Dev</h3>
-            <ul>
-              <li><strong>Unity Engine</strong></li>
-              <li><strong>PyGame</strong></li>
-            </ul>
+          <div class="game-platform">
+            <span>iOS <small>35K+</small></span>
+            <div>
+              <a
+                href="https://apps.apple.com/us/app/encounter-lite/id1614829003"
+                target="_blank"
+                rel="noopener"
+                >Encounter ↗</a
+              ><a
+                href="https://apps.apple.com/us/app/zigzag-chicken/id1613951460"
+                target="_blank"
+                rel="noopener"
+                >Zigzag Chicken ↗</a
+              >
+            </div>
           </div>
         </div>
+      </section>
+      <section
+        class="skills wrap"
+        id="skills-section"
+        aria-labelledby="skills-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / TOOLKIT</p>
+            <h2 id="skills-title">Different problems.<br />A wider toolkit.</h2>
+          </div>
+          <a
+            class="text-link"
+            href="assets/CanKaragun_CV.pdf"
+            target="_blank"
+            rel="noopener"
+            >Read my résumé ↗</a
+          >
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3>Languages</h3>
+            <p>
+              Python · Go · C · C++ · C#<br />JavaScript · SQL · Swift · Rust
+            </p>
+          </div>
+          <div>
+            <h3>Systems & data</h3>
+            <p>
+              Django · Flask · Node.js · PostgreSQL<br />Redis · Kafka ·
+              RabbitMQ · Docker
+            </p>
+          </div>
+          <div>
+            <h3>Graphics & games</h3>
+            <p>
+              Unity · SDL2 · OpenCV · PyGame<br />Rasterization · Physics ·
+              Pathfinding
+            </p>
+          </div>
+          <div>
+            <h3>Web & delivery</h3>
+            <p>
+              REST · gRPC · WebRTC · WebSockets<br />MongoDB · GraphQL · GitHub
+              Actions
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap" id="contact">
+      <div>
+        <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
+        <h2>Let’s build something.</h2>
+        <a class="email-link" href="mailto:cankaragun@gmail.com"
+          >cankaragun@gmail.com <span aria-hidden="true">↗</span></a
+        >
       </div>
-    </section>
-  </div>
-
-  <!-- Font Awesome (Xbox icon) -->
-  <script src="https://kit.fontawesome.com/9dff89872f.js" crossorigin="anonymous"></script>
-</body>
+      <div class="footer-bottom">
+        <span>© 2026 Can Ogan Karagün</span>
+        <div>
+          <a href="https://github.com/coganka" target="_blank" rel="noopener"
+            >GitHub ↗</a
+          ><a
+            href="https://linkedin.com/in/canogankaragun"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn ↗</a
+          ><a
+            href="https://www.youtube.com/@coganka"
+            target="_blank"
+            rel="noopener"
+            >YouTube ↗</a
+          >
+        </div>
+        <a href="#home-section">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>
