@@ -772,9 +772,6 @@ h2 {
   .skills-grid p {
     font-size: 0.88rem;
   }
-  .skills-grid p br {
-    display: none;
-  }
   .footer {
     padding-top: 45px;
   }
